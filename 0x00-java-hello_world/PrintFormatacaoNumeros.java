@@ -8,7 +8,6 @@ import java.util.Locale;
             NumberFormat nf = NumberFormat.getInstance(new Locale("en", "US"));
             String val = nf.format(valor);
             System.out.println("Valor: R$ "+val.substring(0,8));
-            System.out.printf("Taxa: %.2f%s", taxa, "%");
-            
+            System.out.printf("Taxa: %.2f%s", taxa, "%");           
         }
     }
