@@ -1,19 +1,25 @@
 public class PersonagemGame{
 
-	private int saudeAtual;
+	private int saudeAtual=0;
 	private String nome;
 
 	public void tomarDano(int quantidadeDeDano) {
-		if (this.saudeAtual >= 0) {
-			this.saudeAtual -= quantidadeDeDano;
+		this.saudeAtual -= quantidadeDeDano;
+		if (this.saudeAtual < 0) {
+			this.saudeAtual = 0;
 		}
 
 	}
 
-	public void quantidadeDeCura(int receberCura) {
-		if (this.saudeAtual <= 100) {
-			this.saudeAtual += receberCura;
+	public void receberCura(int quantidadeDeCura) {
+
+		this.saudeAtual += quantidadeDeCura;
+		if (this.saudeAtual > 100) {
+			this.saudeAtual = 100;
 		}
+
+	}
+
 
 	public int getSaudeAtual() {
 		return saudeAtual;
