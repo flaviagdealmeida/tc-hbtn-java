@@ -24,3 +24,5 @@ public class Program {
             , personagem1.getStatus());
     }
 }
+
+
