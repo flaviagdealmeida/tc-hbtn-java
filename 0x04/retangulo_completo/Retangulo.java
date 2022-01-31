@@ -33,7 +33,7 @@ public class Retangulo extends FormaGeometrica{
 
 	@Override
 	public String toString() {
-		String frm = String.format("[Retangulo] %.2f / %.2f ", largura, altura);
+		String frm = String.format("[Retangulo] %.2f / %.2f", largura, altura);
 		return frm;
 	}
 
