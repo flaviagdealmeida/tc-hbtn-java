@@ -2,8 +2,9 @@ import java.util.Locale;
 
 public class Program {
 	 public static void main(String[] args) {
-		Locale locale = new Locale("pt","br");
-		 
+
+	Locale locale = new Locale("pt","br");
+ 
          Departamento departamentoEngenharia = new Departamento(1000, 1100);
          Departamento departamentoDocumentacao = new Departamento(1000, 800);
 
