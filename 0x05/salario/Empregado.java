@@ -17,7 +17,7 @@ public class Empregado {
 	}
 	
 	public double calcularSalarioTotal(Departamento departamento) {
-		return salarioFixo + bonus;
+		return calcularBonus(departamento) + salarioFixo;
 	}
 
 	public double getSalarioFixo() {
