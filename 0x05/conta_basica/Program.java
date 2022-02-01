@@ -1,4 +1,6 @@
 import java.util.Locale;
+import exceptions.OperacaoInvalidaException;
+
 public class Program {
     public static void main(String[] args) {
     	Locale.setDefault(new Locale("pt", "BR"));
