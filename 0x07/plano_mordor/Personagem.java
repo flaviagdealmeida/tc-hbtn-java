@@ -36,7 +36,7 @@ public class Personagem {
 	
 	public void comer(Comida[] comidas) {
 		for (Comida comida : comidas) {
-			pontosDeFelicidade = comida.getPontosDeFelicidade();
+			pontosDeFelicidade += comida.getPontosDeFelicidade();
 			//obterHumorAtual(pontosDeFelicidade);
 		}
 	}
