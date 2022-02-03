@@ -28,7 +28,7 @@ public void apresentarResumoPedido() {
 			tipo = itemPedido.getProduto().getClass().getName();
 		System.out.printf("Tipo: %s  Titulo: %s  Preco: %.2f  Quant: %d  Total: %.2f\n",tipo.replace("produtos.", "") 
 		,itemPedido.getProduto().getTitulo() 
-		,itemPedido.getProduto().getPrecoBruto()
+		,itemPedido.getProduto().obterPrecoLiquido(itemPedido.getProduto().getPrecoBruto())
 		,itemPedido.getQuantidade() 
 		,itemPedido.getProduto().obterPrecoLiquido(itemPedido.getProduto().getPrecoBruto())* itemPedido.getQuantidade());
 		}
