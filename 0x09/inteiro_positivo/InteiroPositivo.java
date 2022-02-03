@@ -37,7 +37,7 @@ public class InteiroPositivo {
 				}
 			}
 				
-				if (cont == 2 || valor == 1) {
+				if (cont == 2) {
 					return true;
 				}
 				
