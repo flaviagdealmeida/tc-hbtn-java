@@ -34,9 +34,9 @@ public void apresentarResumoPedido() {
 		}
 		System.out.println("----------------------------");
 		System.out.printf("DESCONTO: %.2f\n", (total2 * percentualDesconto / 100));
-		System.out.printf("TOTAL PRODUTOS:  %.2f\n", total2);
+		System.out.printf("TOTAL PRODUTOS: %.2f\n", total2);
 		System.out.println("----------------------------");
-		System.out.printf("TOTAL PEDIDO:  %.2f\n", calcularTotal());
+		System.out.printf("TOTAL PEDIDO: %.2f\n", calcularTotal());
 		System.out.println("----------------------------");
 	}
 
