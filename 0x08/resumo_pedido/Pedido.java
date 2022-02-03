@@ -3,7 +3,7 @@ public class Pedido {
 	private double percentualDesconto;
 	private ItemPedido[] itens;
 	private double total, total2;
-	
+	private String tipo;	
 	
 	public Pedido(int percentualDesconto, ItemPedido[] itens) {
 		super();
@@ -25,7 +25,8 @@ public void apresentarResumoPedido() {
 		for (ItemPedido itemPedido : itens) {
 			total2 += (itemPedido.getProduto().obterPrecoLiquido(itemPedido.getProduto().getPrecoBruto())* itemPedido.getQuantidade());
 		
-		System.out.printf("Tipo: %s  Titulo: %s  Preco: %.2f  Quant: %d  Total: %.2f\n" ,  itemPedido.getProduto().getClass().getName() 
+			tipo = itemPedido.getProduto().getClass().getName();
+		System.out.printf("Tipo: %s  Titulo: %s  Preco: %.2f  Quant: %d  Total: %.2f\n",tipo.replace("produtos.", "") 
 		,itemPedido.getProduto().getTitulo() 
 		,itemPedido.getProduto().getPrecoBruto()
 		,itemPedido.getQuantidade() 
