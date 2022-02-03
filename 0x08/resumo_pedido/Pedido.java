@@ -21,7 +21,7 @@ public class Pedido {
 	
 public void apresentarResumoPedido() {
     	
-		System.out.println("-------- RESUMO PEDIDO -------");
+		System.out.println("------- RESUMO PEDIDO -------");
 		for (ItemPedido itemPedido : itens) {
 			total2 += (itemPedido.getProduto().obterPrecoLiquido(itemPedido.getProduto().getPrecoBruto())* itemPedido.getQuantidade());
 		
