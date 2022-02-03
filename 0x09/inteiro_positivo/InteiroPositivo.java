@@ -1,6 +1,8 @@
 public class InteiroPositivo {
 
-	private int valor, cont = 0, teste;
+	private int valor;
+	private int cont = 0;
+	private int teste;
 
 	public InteiroPositivo(int valor) {
 
@@ -22,7 +24,7 @@ public class InteiroPositivo {
 		if (valor > 0) {
 			this.valor = valor;
 		} else {
-			throw new RuntimeException("Valor nao eh um valor inteiro positivo");
+			throw new IllegalArgumentException("Valor nao eh um valor inteiro positivo");
 		}
 
 	}
