@@ -25,7 +25,7 @@ public void apresentarResumoPedido() {
 		for (ItemPedido itemPedido : itens) {
 			total2 += (itemPedido.getProduto().obterPrecoLiquido(itemPedido.getProduto().getPrecoBruto())* itemPedido.getQuantidade());
 		
-		System.out.printf("Tipo: %s  Titulo: %s  Preco: %.2f  Quant: %d  Total: %.2f\n" ,  itemPedido.getClass().getName() 
+		System.out.printf("Tipo: %s  Titulo: %s  Preco: %.2f  Quant: %d  Total: %.2f\n" ,  itemPedido.getProduto().getClass().getName() 
 		,itemPedido.getProduto().getTitulo() 
 		,itemPedido.getProduto().getPrecoBruto()
 		,itemPedido.getQuantidade() 
