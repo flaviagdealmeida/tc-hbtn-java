@@ -5,14 +5,14 @@ import javax.swing.text.StyledEditorKit.ForegroundAction;
 
 public class Celular {
 
-	private List<Contato> listaDeContatos = new ArrayList<Contato>();
+	private ArrayList<Contato> listaDeContatos = new ArrayList<Contato>();
 	private List<Contato> listaDeContatosPesquisados = new ArrayList<Contato>();
 
 	public Celular() {
 
 	}
 
-	public Celular(List<Contato> listaDeContatos) {
+	public Celular(ArrayList<Contato> listaDeContatos) {
 		this.listaDeContatos = listaDeContatos;
 	}
 
