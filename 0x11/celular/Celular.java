@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.text.StyledEditorKit.ForegroundAction;
-
 public class Celular {
 
 	private ArrayList<Contato> listaDeContatos = new ArrayList<Contato>();
