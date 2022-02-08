@@ -12,6 +12,8 @@ public class Program {
 		banco.adicionarTransacaoCliente("Alameda", "Jane Doe", 44.22);
 		banco.adicionarTransacaoCliente("Alameda", "Jane Doe", 12.44);
 		banco.adicionarTransacaoCliente("Alameda", "Jackson Percy", 1.65);
+		
+		banco.listarClientes("Alameda", true);
 	}
 }
 

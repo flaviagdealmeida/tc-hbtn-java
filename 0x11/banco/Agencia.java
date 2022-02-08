@@ -6,10 +6,6 @@ public class Agencia {
 	private ArrayList<Cliente> clientes;
 	
 
-	public Agencia() {
-
-	}
-
 	public Agencia(String nome) {
 		super();
 		this.nome = nome;
@@ -17,13 +13,14 @@ public class Agencia {
 
 	}
 
-	public boolean novoCliente(String nome, double transacao) {
-
-		if (buscarCliente(nome) != null) {
+	public boolean novoCliente(String nomeCliente, double transacao) {
+		Cliente clienteLocalizado = buscarCliente(nomeCliente);
+		if (clienteLocalizado != null) {
 			return false;
 		}
-		Cliente novoCliente = new Cliente(nome, transacao);
+		Cliente novoCliente = new Cliente(nomeCliente, transacao);
 		clientes.add(novoCliente);
+		
 		return true;
 	}
 
@@ -56,3 +53,4 @@ public class Agencia {
 	}
 
 }
+
