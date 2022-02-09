@@ -1,28 +1,27 @@
 package provedores;
-import frete.Frete;
-
-public class JadLog implements ProvedorFrete {
+import resumo_pedido.Frete;
+public class Sedex implements ProvedorFrete {
 
 	private Frete frete = new Frete();
 	private double totalFrete;
 	
-	public JadLog() {
+	public Sedex() {
 		
 	}
 	
 	@Override
 	public Frete calcularFrete(double peso, double valor) {
-		totalFrete = peso > 2000 ? (valor*0.07): (valor*0.045);
+		totalFrete = peso > 1000 ? (valor*0.10): (valor*0.05); 
 		
 		frete.setValor(totalFrete);
 		frete.setTipoProvedorFrete(obterTipoProvedorFrete());
-		return frete;
 		
+		return frete;
 	}
 
 	@Override
 	public TipoProvedorFrete obterTipoProvedorFrete() {
-		return TipoProvedorFrete.JADLOG;
+		
+		return TipoProvedorFrete.SEDEX;
 	}
-
 }

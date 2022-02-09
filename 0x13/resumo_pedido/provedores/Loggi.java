@@ -1,27 +1,27 @@
 package provedores;
-import frete.Frete;
-public class Sedex implements ProvedorFrete {
-
+import resumo_pedido.Frete;
+public class Loggi implements ProvedorFrete {
+	
 	private Frete frete = new Frete();
 	private double totalFrete;
-	
-	public Sedex() {
+
+	public Loggi() {
 		
 	}
-	
+
 	@Override
 	public Frete calcularFrete(double peso, double valor) {
-		totalFrete = peso > 1000 ? (valor*0.10): (valor*0.05); 
-		
+		totalFrete = peso > 5000 ? (valor * 0.15) : (valor * 0.4);
 		frete.setValor(totalFrete);
 		frete.setTipoProvedorFrete(obterTipoProvedorFrete());
-		
 		return frete;
+		
 	}
 
 	@Override
 	public TipoProvedorFrete obterTipoProvedorFrete() {
-		
-		return TipoProvedorFrete.SEDEX;
+
+		return TipoProvedorFrete.LOGGI;
 	}
+
 }
