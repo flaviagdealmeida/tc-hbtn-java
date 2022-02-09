@@ -1,5 +1,5 @@
 package provedores;
-
+import resumo_pedido.Frete;
 public class Loggi implements ProvedorFrete {
 	
 	private Frete frete = new Frete();
