@@ -1,3 +1,4 @@
+import atividades.Atividade;
 public class Workflow {
 	public Workflow() {
 		
