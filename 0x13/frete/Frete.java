@@ -1,5 +1,3 @@
-package provedores;
-
 public class Frete{
 	
 	private double valor = 0;
