@@ -15,8 +15,9 @@ public class Pedido {
 		this.codigo = codigo;
 		this.peso = peso;
 		this.total = total;
+	
 		
-	}
+		}
 	
 	public int getCodigo() {
 		return codigo;
@@ -42,5 +43,11 @@ public class Pedido {
 	public void setFrete(Frete frete) {
 		this.frete = frete;
 	}
+	
+	
+	
+	
+	
+	
 
 }
