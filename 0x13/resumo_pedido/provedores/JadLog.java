@@ -1,5 +1,4 @@
 package provedores;
-import resumo_pedido.Frete;
 
 public class JadLog implements ProvedorFrete {
 
