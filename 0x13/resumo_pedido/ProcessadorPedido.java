@@ -16,7 +16,7 @@ public class ProcessadorPedido {
 	}
 	
 	public void processar(Pedido pedido) {
-		double valor = provedorFrete.calcularFrete(pedido.getPeso(), pedido.getPeso());
+		double valor = provedorFrete.calcularFrete(pedido.getPeso(), pedido.getTotal());
 			
 		frete.setTipoProvedorFrete(provedorFrete.obterTipoProvedorFrete());
 		frete.setValor(valor);

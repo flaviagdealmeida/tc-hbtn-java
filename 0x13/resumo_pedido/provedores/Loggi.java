@@ -8,7 +8,7 @@ public class Loggi implements ProvedorFrete {
 
 	@Override
 	public double calcularFrete(double peso, double valor) {
-		return (peso > 5000 ? (valor * 0.15) : (valor * 0.04));
+		return (peso > 5000 ? (valor * 0.12) : (valor * 0.04));
 		
 	}
 
