@@ -5,7 +5,9 @@ public class AnalisadorFrase {
 	public static TreeMap<String, Integer> contagemPalavras(String frase){
 		TreeMap<String, Integer> map = new TreeMap<>();
 		
-		frase = frase.replaceAll("[^,a-zA-Z1-9 ]", "");
+		frase = frase.replace("?","");
+		frase = frase.replace("!","");
+		frase = frase.replace(".","");
 		
 		String [] arrayString = frase.split(" ");
 		int total=0;
