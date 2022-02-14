@@ -1,7 +1,9 @@
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Telefone {
+public class Telefone implements Serializable {
 
+	private static final long serialVersionUID = 1L;
 	private String codigoArea;
 	private String numero;
 
