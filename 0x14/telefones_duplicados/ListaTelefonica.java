@@ -33,7 +33,7 @@ public class ListaTelefonica {
 		if(chave.equals(nome) && achou) {
 			throw new IllegalArgumentException("Telefone jah existente para essa pessoa");
 		}else if(!chave.equals(nome) && achou){
-			throw new IllegalArgumentException("Telefone jah pertence para outra pessoa");
+			throw new IllegalArgumentException("Telefone jah pertence a outra pessoa");
 		}
 
 		telTempLoc.add(telefone);
