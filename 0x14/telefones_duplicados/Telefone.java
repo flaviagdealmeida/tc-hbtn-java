@@ -1,7 +1,6 @@
-import java.io.Serializable;
 import java.util.Objects;
 
-public class Telefone implements Serializable {
+public class Telefone {
 
 	private static final long serialVersionUID = 1L;
 	private String codigoArea;
@@ -40,7 +39,11 @@ public class Telefone implements Serializable {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(codigoArea, numero);
+		final int prime = 31;
+		int result = 7;
+		result = prime * result + ((codigoArea == null) ? 0 : codigoArea.hashCode());
+		result = prime * result + ((numero == null) ? 0 : numero.hashCode());
+		return result;
 	}
 
 	@Override
@@ -52,7 +55,17 @@ public class Telefone implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Telefone other = (Telefone) obj;
-		return Objects.equals(codigoArea, other.codigoArea) && Objects.equals(numero, other.numero);
+		if (codigoArea == null) {
+			if (other.codigoArea != null)
+				return false;
+		} else if (!codigoArea.equals(other.codigoArea))
+			return false;
+		if (numero == null) {
+			if (other.numero != null)
+				return false;
+		} else if (!numero.equals(other.numero))
+			return false;
+		return true;
 	}
-}
 
+}	
