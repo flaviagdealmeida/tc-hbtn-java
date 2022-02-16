@@ -94,11 +94,6 @@ public class Post implements Comparable<Post> {
 
 	@Override
 	public int compareTo(Post outroPost) {
-		int autor = this.getAutor().compareTo(outroPost.getAutor());
-		int titulo = this.getTitulo().compareTo(outroPost.getTitulo());
-		
-		if(autor != 0) return autor;
-		
-		return titulo;
+		return this.getTitulo().compareTo(outroPost.getTitulo());
 	}
 }
