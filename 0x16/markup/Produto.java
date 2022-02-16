@@ -19,7 +19,7 @@ public class Produto {
 		
 	}
 
-	Supplier<Double> precoComMarkUp = () -> preco*(1+percentualMarkup); 
+	Supplier<Double> precoComMarkUp = () -> preco*(1+percentualMarkUp); 
 	Consumer<Double> atualizarMarkUp = valor ->  this.percentualMarkUp =(valor/100);
 	
 	
