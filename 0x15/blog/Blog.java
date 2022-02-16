@@ -15,8 +15,8 @@ public class Blog {
 		posts = new ArrayList<>();
 	}
 
-	public void adicionarPostagem(Post novosPosts) {
-		posts.add(novosPosts);
+	public void adicionarPostagem(Post postagem) {
+		posts.add(postagem);
 	}
 	
 	public void ordenarPosts() {
