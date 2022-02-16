@@ -1,8 +1,8 @@
 public class FolhaPagamento{
 	
-	public static double calcularLiquido
-	(Funcionario f, CalculadorDeSalario calculadora) {
-		return calculadora.calcular(f.getSalario());
+	public static double calularLiquido
+	(Funcionario funcionario, CalculadorDeSalario calculadora) {
+		return calculadora.calcular(funcionario.getSalario());
 	}
 
 }
