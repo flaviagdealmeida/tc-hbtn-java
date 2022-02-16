@@ -1,10 +1,12 @@
-public class Autor implements Comparable<Autor>{
+package postagem_blog;
+
+public class Autor implements Comparable<Autor> {
 
 	private String nome;
 	private String sobrenome;
-	
+
 	public Autor() {
-		
+
 	}
 
 	public Autor(String nome, String sobrenome) {
@@ -20,8 +22,7 @@ public class Autor implements Comparable<Autor>{
 	public String getSobrenome() {
 		return sobrenome;
 	}
-	
-	
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
@@ -32,7 +33,7 @@ public class Autor implements Comparable<Autor>{
 
 	@Override
 	public String toString() {
-		return this.nome +" "+this.sobrenome ;
+		return this.nome + " " + this.sobrenome;
 	}
 
 	@Override
@@ -67,13 +68,10 @@ public class Autor implements Comparable<Autor>{
 	}
 
 	@Override
-	public int compareTo(Autor outroAutor) {
-		int nome = this.getNome().compareTo(outroAutor.getNome());
-		int sobrenome = this.getSobrenome().compareTo(outroAutor.getSobrenome());
-		
-		if(nome != 0) return nome;
-		
-		return sobrenome;
-		}
-		
+	public int compareTo(Autor autor) {
+		return this.toString().compareTo(autor.toString());
+
+	}
+
 }
+

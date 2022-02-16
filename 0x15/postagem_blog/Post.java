@@ -1,3 +1,5 @@
+package postagem_blog;
+
 public class Post implements Comparable<Post> {
 
 	private Autor autor;	
@@ -94,6 +96,9 @@ public class Post implements Comparable<Post> {
 
 	@Override
 	public int compareTo(Post outroPost) {
-		return this.getTitulo().compareTo(outroPost.getTitulo());
+		return this.toString().compareTo(outroPost.toString());
+
 	}
+
+	
 }

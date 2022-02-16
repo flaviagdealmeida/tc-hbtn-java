@@ -1,3 +1,5 @@
+package postagem_blog;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -8,11 +10,10 @@ import java.util.TreeSet;
 
 public class Blog {
 
-	private List<Post> posts;
+	private List<Post> posts = new ArrayList<>();
 
 	public Blog() {
-		super();
-		posts = new ArrayList<>();
+	
 	}
 
 	public Set<Autor> obterTodosAutores() {
@@ -80,35 +81,38 @@ public class Blog {
 	}
 
 	public Map<Categorias, Set<Post>> obterTodosPostsPorCategorias() {
-		Map<Categorias, Set<Post>> mapaCategorias = new TreeMap<Categorias, Set<Post>>();
-		Set<Post> postagens = new TreeSet<Post>();
-
-		for (int i = 0; i < posts.size(); i++) {
-			for (int j = 0; j < posts.size(); j++) {
-				if (posts.get(i).getCategoria().equals(posts.get(j).getCategoria())) {
-					postagens.add(posts.get(i));
-				}
+		Map<Categorias, Set<Post>> todosPosts = new TreeMap<>();
+		for (Post post : posts) {
+			Set<Post> postagem;
+			if (todosPosts.containsKey(post.getCategoria())) {
+				postagem = todosPosts.get(post.getCategoria());
+			} else {
+				postagem = new TreeSet<>();
 			}
-			mapaCategorias.put(posts.get(i).getCategoria(), postagens);
+
+			postagem.add(post);
+			todosPosts.put(post.getCategoria(), postagem);
 		}
 
-		return mapaCategorias;
+		return todosPosts;
+
 	}
 
 	public Map<Autor, Set<Post>> obterTodosPostsPorAutor() {
-		Map<Autor, Set<Post>> mapaAutores = new TreeMap<Autor, Set<Post>>();
-		Set<Post> postagens = new TreeSet<Post>();
-
-		for (int i = 0; i < posts.size(); i++) {
-			for (int j = 0; j < posts.size(); j++) {
-				if (posts.get(i).getAutor().equals(posts.get(j).getAutor())) {
-					postagens.add(posts.get(i));
-				}
+		Map<Autor, Set<Post>> todosPosts = new TreeMap<>();
+		for (Post post : posts) {
+			Set<Post> postagem;
+			if (todosPosts.containsKey(post.getAutor())) {
+				postagem = todosPosts.get(post.getAutor());
+			} else {
+				postagem = new TreeSet<>();
 			}
-			mapaAutores.put(posts.get(i).getAutor(), postagens);
+
+			postagem.add(post);
+			todosPosts.put(post.getAutor(), postagem);
 		}
 
-		return mapaAutores;
+		return todosPosts;
 	}
 
 }
