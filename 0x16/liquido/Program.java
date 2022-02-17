@@ -1,6 +1,6 @@
 public class Program {
     public static void main(String[] args) {
-        Funcionario funcionario1 = new Funcionario(2360d);
+        Funcionario funcionario1 = new Funcionario(2360);
 
         double salarioLiquido90porcento = FolhaPagamento.calcularLiquido(funcionario1, x -> x * 0.9);
         double salarioLiquidoAcrescimo50 = FolhaPagamento.calcularLiquido(funcionario1, x -> x + 50);
