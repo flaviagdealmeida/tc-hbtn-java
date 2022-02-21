@@ -52,7 +52,7 @@ public class Produto {
 	
 	@Override
 	public String toString() {
-		return "["+getCodigo()+"]"+ getNome()+" "+getCategoria()+
+		return "["+getCodigo()+"] "+ getNome()+" "+getCategoria()+
 				" R$" +String.format("%.2f", getPreco());
 	}
 
