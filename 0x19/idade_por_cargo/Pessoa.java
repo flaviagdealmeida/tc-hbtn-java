@@ -1,5 +1,3 @@
-package pessoa_por_idade;
-
 public class Pessoa {
 	private int codigo;
 	private String nome;
