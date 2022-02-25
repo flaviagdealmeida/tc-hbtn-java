@@ -25,6 +25,6 @@ public class Program {
 
 		Comida comidaBuscada1 = armazem2.obterDoInventario("feijao");
 
-		System.out.print(comidaBuscada1);
+		System.out.println(comidaBuscada1);
 	}
 }
