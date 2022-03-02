@@ -1,3 +1,4 @@
+package com.holbertonschool.matematica;
 public class Aritmeticos {
 	
 	public static int somar(int valor1, int valor2) {
