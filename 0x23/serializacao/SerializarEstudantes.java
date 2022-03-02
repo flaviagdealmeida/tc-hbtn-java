@@ -53,16 +53,16 @@ public class SerializarEstudantes<T> {
 			leitura = (List<Estudante>) in.readObject();
 
 		} catch (IOException e) {
-			System.out.println("Nao foi possivel serializar");
+			System.out.println("Nao foi possivel desserializar");
 		} catch (ClassNotFoundException e) {
-			System.out.println("Nao foi possivel serializar");
+			System.out.println("Nao foi possivel desserializar");
 		} finally {
 			if (in != null) {
 				try {
 
 					fileIn.close();
 				} catch (IOException e) {
-					System.out.println("Nao foi possivel serializar");
+					System.out.println("Nao foi possivel desserializar");
 				}
 			}
 		}
